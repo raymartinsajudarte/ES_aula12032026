@@ -18,7 +18,7 @@ Autenticar o usuário para acesso às funcionalidades do sistema de acordo com s
 3. O sistema autentica o usuário e redireciona para a dashboard correspondente ao perfil.
 
 ### Fluxos Alternativos
-- **A1 — Credenciais incorretas:**  
+- **A1 — Credenciais Incorretas:**  
   O sistema exibe mensagem de erro e solicita nova tentativa.
 
 - **A2 — Conta bloqueada:**  
@@ -56,7 +56,8 @@ Registro do aluno criado no banco de dados.
 4. O sistema salva o cadastro e gera o ID único do aluno.
 
 ### Fluxos Alternativos
-- **A1 — Dados Inválidos: O sistema destaca os campos incorretos e solicita correção.**  
+- **A1 — Dados Inválidos:**  
+O sistema destaca os campos incorretos e solicita correção.
 
 ### RF Relacionados
 - RF01
@@ -66,3 +67,39 @@ Registro do aluno criado no banco de dados.
 
 ### RN Relacionadas
 - RN06
+
+
+
+## UC03 — Gerenciar Tipos de Planos
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Criar ou editar as modalidades de planos oferecidas pela academia.
+
+### Pré-condições
+- Gerente autenticado.
+
+### Pós-condições
+- Plano atualizado ou criado na base de dados.
+
+### Fluxo Principal
+1. O gerente acessa "Configurações de Planos".
+2. Define nome, valor, duração e descrição.
+3. O sistema salva as alterações.
+
+### Fluxos Alternativos
+- **A1 — Desativar Plano:**
+O gerente seleciona um plano existente e marca como "Inativo".
+
+### RF Relacionados
+- RF02
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
