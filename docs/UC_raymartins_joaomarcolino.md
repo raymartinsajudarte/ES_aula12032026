@@ -1,34 +1,34 @@
 ## UC01 — Realizar Login
 
 ### Ator Principal
-Usuário
+Usuário (Aluno, Recepcionista, Instrutor, Gerente)
 
 ### Objetivo
-Permitir que o usuário acesse o sistema.
+Autenticar o usuário para acesso às funcionalidades do sistema de acordo com seu perfil.
 
 ### Pré-condições
 - Usuário deve possuir cadastro ativo.
 
 ### Pós-condições
-- Sessão iniciada com sucesso.
+- Sessão iniciada com sucesso e permissões carregadas.
 
 ### Fluxo Principal
 1. O usuário informa e-mail e senha.
 2. O sistema valida as credenciais.
-3. O sistema autentica o usuário e redireciona para a tela inicial.
+3. O sistema autentica o usuário e redireciona para a dashboard correspondente ao perfil.
 
 ### Fluxos Alternativos
-- **A1 — Senha incorreta:**  
-  O sistema exibe mensagem de erro.
+- **A1 — Credenciais incorretas:**  
+  O sistema exibe mensagem de erro e solicita nova tentativa.
 
 - **A2 — Conta bloqueada:**  
   O sistema impede o login e instrui o usuário a recuperar o acesso.
 
 ### RF Relacionados
-- (inserir RF aqui)
+- RF01, RF09
 
 ### RNF Relacionados
-- (inserir RNF aqui)
+- RNF02, RNF03, RNF04
 
 ### RN Relacionadas
-- (inserir RN aqui)
+- RN06
