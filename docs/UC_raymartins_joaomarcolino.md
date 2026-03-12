@@ -103,3 +103,72 @@ O gerente seleciona um plano existente e marca como "Inativo".
 - RN06
 
 
+
+## UC04 — Registrar Pagamento na Recepção
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Processar o pagamento presencial de mensalidades.
+
+### Pré-condições
+- Aluno identificado no sistema.
+
+### Pós-condições
+- Status de pagamento atualizado e recibo gerado.
+
+### Fluxo Principal
+1. O recepcionista seleciona a parcela em aberto do aluno.
+2. Escolhe o método (Dinheiro, Cartão ou PIX).
+3. O sistema processa a transação e confirma o recebimento integral.
+4. O sistema atualiza a regularidade do aluno instantaneamente.
+
+### Fluxos Alternativos
+- **A1 — Pagamento Parcial:**
+O sistema bloqueia a operação informando que apenas valores integrais são aceitos.
+
+### RF Relacionados
+- RF03, RF04
+
+### RNF Relacionados
+- RNF02, RNF03
+
+### RN Relacionadas
+- RN04, RN07
+
+
+
+## UC05 — Validar Acesso na Catraca (RFID)
+
+### Ator Principal
+Sistema de Catraca (API)
+
+### Objetivo
+Controlar a entrada física do aluno na unidade.
+
+### Pré-condições
+- Aluno aproxima o cartão/tag RFID no leitor.
+
+### Pós-condições
+- Acesso liberado ou bloqueado.
+
+### Fluxo Principal
+1. A API da catraca envia o ID do RFID para o sistema FitPass.
+2. O sistema verifica a regularidade financeira do aluno.
+3. O sistema retorna o comando de "Liberar" para a catraca.
+
+### Fluxos Alternativos
+- **A1 — Inadimplência (> 5 dias):**
+O sistema retorna comando "Bloquear" e exibe mensagem na tela da catraca.
+- **A2 — Plano Inativo:
+O sistema nega o acesso.
+
+### RF Relacionados
+- RF04, RF05
+
+### RNF Relacionados
+- RNF03, RNF06
+
+### RN Relacionadas
+- RN01
