@@ -32,3 +32,37 @@ Autenticar o usuário para acesso às funcionalidades do sistema de acordo com s
 
 ### RN Relacionadas
 - RN06
+
+
+
+## UC02 — Cadastrar Novo Aluno
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Registrar um novo cliente na base de dados da academia.
+
+### Pré-condições
+Recepcionista autenticado no sistema.
+
+### Pós-condições
+Registro do aluno criado no banco de dados.
+
+### Fluxo Principal
+1. O recepcionista acessa o menu "Matrículas".
+2. Preenche dados pessoais, contato, endereço e seleciona o plano.
+3. O sistema valida os campos obrigatórios.
+4. O sistema salva o cadastro e gera o ID único do aluno.
+
+### Fluxos Alternativos
+- **A1 — Dados Inválidos: O sistema destaca os campos incorretos e solicita correção.**  
+
+### RF Relacionados
+- RF01
+
+### RNF Relacionados
+- RNF02, RNF04
+
+### RN Relacionadas
+- RN06
