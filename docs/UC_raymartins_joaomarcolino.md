@@ -485,3 +485,95 @@ O sistema exibe mensagem informando que o aluno não foi encontrado.
 
 
 
+## UC15 — Emitir Relatório de Ocupação de Aulas
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Analisar quais aulas possuem maior demanda.
+
+### Pré-condições
+- Gerente autenticado no sistema.
+- Registros de aulas e presenças cadastrados no sistema. 
+
+### Pós-condições
+- Relatório de ocupação exibido com dados de vagas preenchidas e disponíveis.
+
+### Fluxo Principal
+1. Gerente acessa "Relatório de Ocupação".
+2. O sistema mostra gráficos de vagas preenchidas vs disponíveis.
+
+### Fluxos Alternativos
+- **A1 — Relatório de ocupação exibido com dados de vagas preenchidas e disponíveis:**  
+O sistema informa que não há informações disponíveis e permite nova consulta.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC16 — Vincular Tag RFID ao Aluno
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Associar um cartão físico ao perfil do aluno para uso na catraca.
+
+### Pré-condições
+- Recepcionista autenticado no sistema.
+- Aluno previamente cadastrado no sistema.
+
+### Pós-condições
+- Tag RFID vinculada ao cadastro do aluno.
+
+### Fluxo Principal
+1. Recepcionista abre o perfil do aluno.
+2. Clica em "Vincular RFID" e aproxima a tag no leitor da recepção.
+3. O sistema grava o código no cadastro.
+
+### Fluxos Alternativos
+- **A1 — Falha na leitura da tag RFID:**  
+O sistema não consegue identificar o código da tag.
+
+### RF Relacionados
+- RF01, RF05
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC17 — Visualizar Evolução Física
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Consultar os resultados das suas avaliações físicas.
+
+### Fluxo Principal
+1. Aluno acessa "Minha Evolução".
+2. O sistema exibe histórico de peso e medidas.
+
+### RF Relacionados
+- RF08
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- N/A
+
+
+
