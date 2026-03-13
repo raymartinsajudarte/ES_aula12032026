@@ -577,3 +577,68 @@ Consultar os resultados das suas avaliações físicas.
 
 
 
+## UC18 — Ativar/Desativar Plano de Aluno
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Interromper o acesso de um aluno por motivos administrativos (ex: trancamento).
+
+### Fluxo Principal
+1. Gerente localiza o contrato do aluno.
+2. Altera o status para "Suspenso" ou "Ativo".
+
+### RF Relacionados
+- RF02
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC19 — Notificar Confirmação de Agendamento
+
+### Ator Principal
+Sistema (Automático)
+
+### Objetivo
+Confirmar ao aluno que sua vaga foi reservada com sucesso.
+
+### Fluxo Principal
+1. Após a conclusão do UC06, o sistema envia mensagem de confirmação imediata.
+
+### RF Relacionados
+- RF10
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN02
+
+
+
+## UC20 — Listar Alunos Ativos
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Obter a contagem total de clientes matriculados com contrato vigente.
+
+### Fluxo Principal
+1. Gerente solicita "Relatório de Alunos Ativos".
+2. O sistema filtra por status do contrato e exibe a lista.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
