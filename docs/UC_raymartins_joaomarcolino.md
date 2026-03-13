@@ -412,3 +412,76 @@ O sistema agenda uma nova tentativa de envio da notificação.
 
 ### RN Relacionadas
 - N/A
+
+
+
+## UC13 — Consultar Histórico de Acessos
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Monitorar o fluxo de pessoas na academia por período.
+
+### Pré-condições
+- Gerente autenticado no sistema.
+- Registros de acesso armazenados no sistema.
+
+### Pós-condições
+- Histórico de acessos exibido na tela para consulta.
+
+### Fluxo Principal
+1. Gerente acessa "Relatórios de Acesso".
+2. O sistema solicita o período de consulta.
+3. O gerente informa o intervalo de datas.
+4. O sistema consulta os registros da catraca.
+5. O sistema exibe os logs de acesso com data e horário.
+
+### Fluxos Alternativos
+- **A1 — Nenhum registro encontrado:**  
+O sistema exibe uma mensagem informando que não há registros disponíveis.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC14 — Editar Cadastro de Aluno
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Atualizar informações de endereço ou contato do aluno.
+
+### Pré-condições
+- Recepcionista autenticado no sistema.
+
+### Pós-condições
+- Dados do aluno atualizados com sucesso no sistema.
+
+### Fluxo Principal
+1. Recepcionista busca o aluno.
+2. Altera os campos necessários e salva.
+
+### Fluxos Alternativos
+- **A1 — Aluno não encontrado:**  
+O sistema exibe mensagem informando que o aluno não foi encontrado. 
+
+### RF Relacionados
+- RF01
+
+### RNF Relacionados
+- N/A
+
+### RN Relacionadas
+- RN06
+
+
+
