@@ -172,3 +172,243 @@ O sistema nega o acesso.
 
 ### RN Relacionadas
 - RN01
+
+
+
+## UC06 — Agendar Aula
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Reservar uma vaga em uma aula coletiva específica.
+
+### Pré-condições
+- Aluno autenticado e com mensalidade em dia.
+
+### Pós-condições
+- Vaga reservada e confirmada.
+
+### Fluxo Principal
+1. O aluno visualiza a grade de horários.
+2. Seleciona a aula desejada.
+3. O sistema verifica a disponibilidade de vagas.
+4. O sistema confirma o agendamento.
+
+### Fluxos Alternativos
+- **A1 — Aula Lotada:**
+O sistema informa que não há mais vagas e bloqueia a reserva.
+
+### RF Relacionados
+- RF06, RF10
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN02
+
+
+
+## UC07 — Cancelar Agendamento de Aula
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Desistir de uma reserva previamente feita.
+
+### Pré-condições
+- Possuir um agendamento futuro.
+
+### Pós-condições
+- Vaga liberada para outros alunos.
+
+### Fluxo Principal
+1. O aluno acessa "Meus Agendamentos".
+2. Solicita o cancelamento da aula selecionada.
+3. O sistema valida o tempo de antecedência.
+4. O sistema confirma a exclusão do agendamento.
+
+### Fluxos Alternativos
+- **A1 — Fora do Prazo:**
+Se faltar menos de 1 hora, o sistema impede o cancelamento.
+
+### RF Relacionados
+- RF06
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN03
+
+
+
+## UC08 — Registrar Lista de Presença
+
+### Ator Principal
+Instrutor
+
+### Objetivo
+Confirmar quais alunos agendados compareceram à aula.
+
+### Pré-condições
+- Aula iniciada ou finalizada.
+
+### Pós-condições
+- Presença computada no histórico do aluno.
+
+### Fluxo Principal
+1. O instrutor acessa a lista de alunos agendados para sua aula.
+2. Marca o check-in dos presentes.
+3. O sistema salva as presenças.
+
+### Fluxos Alternativos
+- **A1 — Fora do Prazo:**
+Se faltar menos de 1 hora, o sistema impede o cancelamento.
+
+### RF Relacionados
+- RF07
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC09 — Registrar Avaliação Física
+
+### Ator Principal
+Instrutor
+
+### Objetivo
+Coletar e armazenar dados biométricos do aluno.
+
+### Pré-condições
+- Aluno deve estar ativo e regular financeiramente.
+
+### Pós-condições
+- Avaliação salva e notificação enviada ao aluno.
+
+### Fluxo Principal
+1. O instrutor seleciona o aluno.
+2. Insere dados como peso, IMC e percentual de gordura.
+3. O sistema salva o registro e notifica o aluno.
+
+### Fluxos Alternativos
+- **A1 — Aluno Inadimplente:**
+O sistema impede a abertura do formulário de avaliação.
+
+### RF Relacionados
+- RF08, RF10
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN05, RN06
+
+
+
+## UC10 — Emitir Relatório de Inadimplência
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Identificar alunos com pagamentos atrasados para ações de cobrança.
+
+### Pré-condições
+- Gerente autenticado.
+
+### Pós-condições
+- Relatório gerado em tela ou PDF.
+
+### Fluxo Principal
+1. O gerente seleciona "Relatórios > Inadimplência".
+2. Define o período de filtro.
+3. O sistema gera a lista de alunos com débitos.
+
+### Fluxos Alternativos
+- **A1 — Nenhum aluno inadimplente encontrado:**
+O sistema exibe mensagem informando que não há inadimplências no período selecionado.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- RNF05
+
+### RN Relacionadas
+- RN06
+
+
+
+## UC11 — Gerar Boleto/Cartão Online
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Permitir o pagamento da mensalidade via aplicativo/web.
+
+### Pré-condições
+- Mensalidade próxima do vencimento ou vencida.
+
+### Pós-condições
+- Linha digitável ou QR Code PIX gerado.
+
+### Fluxo Principal
+1. O aluno acessa a área financeira.
+2. Seleciona a fatura e clica em "Pagar".
+3. O sistema gera o documento de cobrança.
+
+### Fluxos Alternativos
+- **A1 — Fatura já paga:**
+O sistema informa que a fatura já está quitada e impede a geração de nova cobrança.
+
+### RF Relacionados
+- RF03
+
+### RNF Relacionados
+- RNF02, RNF04
+
+### RN Relacionadas
+- RN04
+
+
+
+## UC12 — Notificar Vencimento de Mensalidade
+
+### Ator Principal
+Sistema (Automático)
+
+### Objetivo
+Alertar o aluno sobre o prazo de pagamento.
+
+### Pré-condições
+- Mensalidade a 3 dias do vencimento.
+
+### Pós-condições
+- Notificação enviada por Push/E-mail.
+
+### Fluxo Principal
+1. O sistema varre a base de dados diariamente.
+2. Identifica contas a vencer.
+3. Dispara notificação automática.
+
+### Fluxos Alternativos
+- **A1 — Falha no envio da notificação:**
+O sistema agenda uma nova tentativa de envio da notificação.
+
+### RF Relacionados
+- RF10
+
+### RNF Relacionados
+- RNF01
+
+### RN Relacionadas
+- N/A
